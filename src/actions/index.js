@@ -1,4 +1,4 @@
-import { set_recent_posts } from "./types";
+import { set_recent_posts, set_results_posts } from "./types";
 
 import axios from "axios";
 
@@ -20,10 +20,10 @@ export function fetchQueryPosts(query) {
       .get(`https://api.dailysmarty.com/search?q=${query}`)
       .then(response => {
         console.log(response.data.posts);
-        // dispatch({
-        //   type: set_recent_posts,
-        //   payload: response.data.posts
-        // });
+        dispatch({
+          type: set_results_posts,
+          payload: response.data.posts
+        });
       });
   };
 }
