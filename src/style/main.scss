@@ -8,8 +8,7 @@ body {
 
 .app-wrapper {
   display: grid;
-  justify-items: center;
-  align-content: space-around;
+  justify-content: center;
 }
 .home {
   height: 100vh;
@@ -18,3 +17,5 @@ body {
   align-content: space-around;
   justify-items: center;
 }
+
+@import "./searchBar";
