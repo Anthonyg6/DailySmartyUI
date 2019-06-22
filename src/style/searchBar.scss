@@ -38,11 +38,17 @@
 }
 
 .search-bar-home {
-  height: 100px;
-  font-size: 40px;
+  align-content: center;
+  justify-items: center;
+  input {
+    font-size: 40px;
+    height: 100px;
+  }
 }
 
 .search-bar-results {
+  align-content: start;
+  justify-items: center;
   input {
     font-size: 22px;
     height: 36px;
