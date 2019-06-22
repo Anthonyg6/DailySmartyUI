@@ -15,6 +15,16 @@ body {
   width: 66vw;
   display: grid;
   align-content: space-around;
+  justify-items: stretch;
+}
+
+.logo-main {
+  display: grid;
+  justify-items: center;
+}
+
+.recent-posts {
+  display: grid;
   justify-items: center;
 }
 

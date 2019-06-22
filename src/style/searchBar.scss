@@ -1,5 +1,9 @@
 .search-bar {
   .search-bar-wrapper {
+    display: grid;
+    grid-row-gap: 23px;
+    width: 100%;
+
     input {
       padding-left: 35px;
       color: #666666;
