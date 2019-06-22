@@ -5,6 +5,11 @@
 body {
   font-family: "Lato", sans-serif;
 }
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
 
 .app-wrapper {
   display: grid;
@@ -29,3 +34,4 @@ body {
 }
 
 @import "./searchBar";
+@import "./recentPosts";

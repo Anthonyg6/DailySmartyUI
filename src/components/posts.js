@@ -17,14 +17,14 @@ class RecentPosts extends Component {
     });
     return posts;
   };
+
   render() {
     return (
       <div>
         <div className="recent-posts">
           <div className="recent-posts-wrapper">
             <div className="recent-posts-heading">Recent Posts</div>
-            <ul className="posts" />
-            {this.renderPosts()}
+            <ul className="recent-post-posts">{this.renderPosts()}</ul>
           </div>
         </div>
       </div>
