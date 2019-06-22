@@ -17,6 +17,7 @@ class Home extends Component {
       <div className="home">
         <Logo />
         <SearchBar
+          page="home"
           onSubmit={query => {
             this.handleSearchBarSubmit(query);
           }}
