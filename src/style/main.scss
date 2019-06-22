@@ -5,6 +5,7 @@
 body {
   font-family: "Lato", sans-serif;
 }
+
 ul {
   list-style-type: none;
   margin: 0px;
@@ -14,13 +15,6 @@ ul {
 .app-wrapper {
   display: grid;
   justify-content: center;
-}
-.home {
-  height: 100vh;
-  width: 66vw;
-  display: grid;
-  align-content: space-around;
-  justify-items: stretch;
 }
 
 .logo-main {
@@ -33,5 +27,8 @@ ul {
   justify-items: center;
 }
 
+@import "./mixins";
 @import "./searchBar";
 @import "./recentPosts";
+@import "./home";
+@import "./results";
