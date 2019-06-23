@@ -27,7 +27,7 @@ class Post extends Component {
         <div className="post-link" key={index}>
           <div className="post-link-box" />
           <div className="post-link-link">
-            <a href={post_link.link_url}>Useful link {index + 1}</a>
+            <a href={post_link.link_url}>Useful link #{index + 1}</a>
           </div>
         </div>
       );
@@ -39,7 +39,9 @@ class Post extends Component {
     if (this.props.type == "recent") {
       return (
         <li className="recent-post">
-          <div className="recent-post-title">{this.props.title}</div>
+          <div className="recent-post-title">
+            <a href={this.props.url_for_post}>{this.props.title}</a>
+          </div>
 
           <div className="recent-post-topics">{this.renderTopics()}</div>
         </li>
@@ -49,19 +51,17 @@ class Post extends Component {
         <li className="result-post">
           <div className="result-post-topics">{this.renderTopics()}</div>
 
-          <div
-            className="result-post-title"
-            onMouseEnter={() => {
-              this.setState({ height: 70 });
-            }}
-            onMouseLeave={() => {
-              this.setState({ height: 0 });
-            }}
-          >
-            <a href={this.props.url_for_post}>{this.props.title}</a>
+          <div className="result-post-titles">
+            <a
+              href={this.props.url_for_post}
+              onMouseEnter={() => this.setState({ height: 70 })}
+              onMouseLeave={() => this.setState({ height: 0 })}
+            >
+              {this.props.title}
+            </a>
           </div>
 
-          <AnimateHeight duration={750} height={this.state.height}>
+          <AnimateHeight duration={500} height={this.state.height}>
             <div className="result-post-links">{this.renderLinks()}</div>
           </AnimateHeight>
         </li>
