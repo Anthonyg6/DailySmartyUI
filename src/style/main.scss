@@ -27,8 +27,9 @@ ul {
   justify-items: center;
 }
 
-a:visited {
-  text-decoration: none;
+.recent-post-title {
+  display: grid;
+  justify-items: start;
 }
 
 @import "./mixins";
